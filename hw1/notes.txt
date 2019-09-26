@@ -1,0 +1,31 @@
+Input = .csv file
+
+// if the user did not give input then ask for one if already arg then assign
+// the value to a variable
+if args[1] is empty
+    ask for int input
+    intervals = input
+else
+    intervals = args[1]
+
+//Finds the first range and the intervals
+range1 = 0
+range2 = 100/args[1]
+
+//Creates all of the ranges for the input given
+range1 = range1 + 1
+for args[1]
+    create range (range1 + range2 "-" range2 + range2)
+
+//get the correct index in the file and add 1 to correct index range
+for each line in file
+    find second index
+        if second index is in range x-y
+            rangexy + 1
+
+//for the amount of values in each range concatenate a closed bracket into the
+// string
+for rangexy
+    xyprint + "[]"
+    printf(xyprint)
+
